@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-ocean-900 via-deep-800 to-deep-900 min-h-screen;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl;
+  }
+  
+  .card-header {
+    @apply bg-gradient-to-r from-ocean-500/30 to-deep-500/30 rounded-t-2xl px-6 py-4 border-b border-white/10;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-blue {
+    @apply bg-ocean-500/30 text-ocean-100 border border-ocean-400/30;
+  }
+  
+  .badge-green {
+    @apply bg-emerald-500/30 text-emerald-100 border border-emerald-400/30;
+  }
+  
+  .badge-purple {
+    @apply bg-purple-500/30 text-purple-100 border border-purple-400/30;
+  }
+  
+  .badge-orange {
+    @apply bg-orange-500/30 text-orange-100 border border-orange-400/30;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
